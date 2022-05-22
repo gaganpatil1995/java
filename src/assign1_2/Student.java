@@ -20,5 +20,7 @@ public class Student {
 	 s1.displayStudentDetails(12,"jay",80);
 	 Student s2 = new Student();
 	 s2.displayStudentDetails(23, "pawan", 82);
+	 s1 = null ;
+	 s2 =null ;
 }
 }
