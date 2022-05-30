@@ -11,27 +11,30 @@ public class Main_ {
 		int numOfK = input.nextInt();
 		OLA s1 = new OLA() ;
 		
-		Car mycar = s1.bookCar(numOfP,numOfK); 
+		 int mycharge = s1.bookCar(numOfP,numOfK); 
 //		System.out.println(mycar.numberOfPassenger);
+		int res = mycharge*numOfK ;
+		System.out.println("Total Fare amount is " + res);
 		
 		
+//		if(numOfP <=3) {
+//		  HatchBack ride = new   HatchBack() ; 
+//		  int res = ride.farePerKm * numOfK;
+//		  System.out.println("Total Fare amount is " + res);
+//		  return ;
+//		}
+//		else {
+//			Sedan ride = new Sedan() ;
+//		}
 		
-		if(numOfP <=3) {
-		  HatchBack ride = new   HatchBack() ; 
-		  int res = ride.farePerKm * numOfK;
-		  System.out.println("Total Fare amount is " + res);
-		  return ;
-		}
-		
-		Sedan ride = new Sedan() ;
 			
 		
 		
-		int res = ride.farePerKm * numOfK;
-//		int a = mycar.farePerKm ;
-//		System.out.println(hatch.farePerKm);
-//		int res = numOfK *a  ;
-		System.out.println("Total Fare amount is " + res);
+//		int res = ride.farePerKm * numOfK;
+////		int a = mycar.farePerKm ;
+////		System.out.println(hatch.farePerKm);
+////		int res = numOfK *a  ;
+//		System.out.println("Total Fare amount is " + res);
 	}
 
 }
@@ -49,17 +52,18 @@ class HatchBack extends Car {
 	 final int farePerKm = 15 ;
 }
 class OLA {
-	public Car bookCar(int numberOfPassenger, int numberOfKms) {
+	public int bookCar(int numberOfPassenger, int numberOfKms) {
 		if(numberOfPassenger<=3) {
 			HatchBack hat = new HatchBack();
+			int charge = hat.farePerKm ;
+//			System.out.println(hat.farePerKm);
 			
-			System.out.println(hat.farePerKm);
-			
-			return hat ;
+			return charge ;
 		}
 		
 			Sedan hat = new Sedan() ;
-			return hat ;
+			int charge = hat.farePerKm ;
+			return charge ;
 		
 	}
 //	int calculateBill(Car c1 ,int numOfK) {
